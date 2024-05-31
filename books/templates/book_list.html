@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<h1 id="titulo-pag">{{title}}</h1>
+
+<div class="flexP">
+
+  {% for book in books %}
+
+    <div class="card" >
+      <div class="container-img">
+        <img src="{{book.book_cover.url}}" alt="{{book.title}}">        
+      </div>
+      <h4> {{book.title}} </h4>
+      <p> <strong> Autor:</strong>  {{book.author}} </p>
+      <p><strong>Data de Publicação:</strong> {{book.published_date}} </p>
+      <!-- <button class="btn">Saiba Mais</button> -->
+    </div>  
+  
+  {% endfor %}
+
+</div>
+
+{% endblock %}

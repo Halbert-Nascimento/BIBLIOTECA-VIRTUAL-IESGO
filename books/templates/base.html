@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="{% static 'book/css/style.css' %}">
+  <title>{% block title %}
+    Biblioteca Virtual
+    {% endblock %}</title>
+</head>
+
+<body>
+  <nav id="navegacao">
+    <a href=" {% url 'index' %}">Home</a>
+    <a href="{% url  'list_books' %}">Book List</a>
+    <a href="{% url  'book_register' %}">book register</a>
+    <a href="/admin">Admin</a>
+
+  </nav>
+  {% block content %}
+
+  {% endblock %}
+</body>
+
+</html>

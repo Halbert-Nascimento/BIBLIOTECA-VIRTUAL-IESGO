@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{%block title%} {{title}} {%endblock%}
+
+{% block content %}
+<h1 id="titulo-pag">{{title}}</h1>
+
+<!-- <form action="" method="post">
+  {% csrf_token %}
+  <label for="id_title"> Titulo:</label>
+  {{form.title}}
+
+  <label for="id_author"> Autor:</label>
+  {{form.author}}
+
+  <label for="id_published_date"> Data Public:</label>
+  {{form.published_date}}
+
+  <label for="id_book_cover"> Capa:</label>
+  {{form.book_cover}}
+
+  <button type="submit">Cadastrar</button>
+
+</form> -->
+
+<form action="" method="post">
+  {% csrf_token %}
+  {{form}}
+
+  <button type="submit">Cadastrar</button>
+
+</form>
+
+
+
+
+{% endblock %}
